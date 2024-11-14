@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Encabezado con nombre y correo>
+    <Autor: Carlos Cortez, ccortez@unbosque.edu.co>
+
+    <meta charset="utf-8">
+    <title>Analizador de lesiones en la piel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Online image analyzer of the three most likely diagnoses for a skin lesion.">
+
+    <!-- Información de contacto -->
+    <meta name="author" content="Carlos Cortez">
+    <meta name="email" content="ccortez@unbosque.edu.co">
+
+    
+    <!--Código para evitar que el navegador almacene en caché la página-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    
+    <!-- Hojas de estilo CSS con versión -->
+    <link href="css/inicio.css?v=2" rel="stylesheet" type="text/css" />
+    <link href="css/slider.css?v=2" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?v=2" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/w3.css?v=2">
+    <link rel="stylesheet" href="css/bee.css?v=2">
+
+    <!-- Iconos de Font Awesome -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="logoinub2.jpg">
+
+    <!-- Estilos embebidos para personalizar colores -->
+    <style>
+        html, body, h2, h3, h4 {font-family: Helvetica, sans-serif}
+        .w3-text-green {color: #4CAF50 !important;} /* Cambia el verde */
+        .w3-btn.w3-blue {background-color: #4285F4 !important; color: white;} /* Cambia el botón azul */
+        .w3-pale-blue {background-color: #E3F2FD;} /* Cambia el color de fondo de contenedores */
+        .card {border: 1px solid #E0E0E0; padding: 20px; border-radius: 8px;} /* Estilos para las tarjetas */
+    </style>
+</head>
+
+<body class="front not-logged-in page-node no-sidebars i18n-en front not-logged-in cuerpo_con_promo cuerpo_con_menu page-node-1">
+    <!-- Contenedor principal -->
+    <div id="sticky_footer-body">
+        <div id="encabezado">
+            <div class="cajon">
+                <div id="micrositios">
+                    <div class='w3-padding'>
+                        <div id="block-menu-primary-links" class="clear-block block block-menu">
+                            <div class="content">
+                                <ul class="menu">
+                                    <a href="index.html" title="Ir a la p&aacute;gina principal"><img src="img/logotiponn.png" alt="" id="logo" style="float:none;" /></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido central -->
+        <div class="w3-content card" style="max-width:960px">
+
+            <!-- Encabezado de la página -->
+            <div class="w3-center title adjust-fontcolor logo">
+                <div class="w3-center">
+                    <img class="w3-round adjust-image" src="assets/logoinub.jpg" width="150" alt=""> 
+                </div>
+                <h1 class="space-letters w3-text-green"><b>Analizador de lesiones en la piel</b></h1>
+                <h3 class="space-letters w3-text-green"><b>Analizador de imágenes en línea de los tres diagnósticos más probables para una lesión en la piel</b></h3>
+            </div>
+
+            <!-- Imagen de portada -->
+            <div class="w3-center">
+                <div align="center">
+                    <img id="selected-image" class="w3-round adjust-image" src="assets/samplepic.jpg" alt=""> 
+                </div>
+            </div>
+
+            <!-- Barra de progreso -->
+            <div class="w3-center">
+                <div class="progress-bar">Modelo con Inteligencia Artificial cargando...</div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
+                <h5 class='new-font'>Resultados</h5>
+                <ol class='w3-left-align' id='prediction-list'></ol>
+            </div>
+
+            <!-- Botón para subir imagen -->
+            <div id="btnn" class="w3-center bottom-padding">
+                <button class="w3-btn w3-blue w3-round w3-margin-bottom adjust-spacing w3-hover-green btn-font w3-padding w3-space-letters w3-card-4" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)">
+                    <i class='fas fa-camera w3-padding-right' style='font-size:15px'></i><b>Enviar una imagen de una lesión en la piel</b>
+                </button>
+            </div> 
+
+            <!-- Características técnicas del modelo -->
+            <div class='w3-padding'>
+                <h5 class="space-letters tag-font w3-text-green"><b>Características técnicas del Modelo:</b></h5>
+                <h5 class="space-letters tag-font w3-text-green"><b>- Exactitud: 0.90 </b></h5>
+                <h5 class="space-letters tag-font w3-text-green"><b>- Precisión: 0.89 </b></h5>
+                <h5 class="space-letters tag-font w3-text-green"><b>- Sensibilidad: 0.90 </b></h5>
+                <h6 class="space-letters tag-font w3-text-green"><b>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow</b></h6>
+            </div>
+
+            <!-- Elementos ocultos para simulación de clics -->
+            <div class="hide">
+                <button id='predict-button'>Predict</button>
+            </div>
+            <div class="hide">
+                <input id="image-selector" type="file">
+            </div>
+        </div>
+
+        <!-- Carga de scripts con versión para evitar caché -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
+        <script src="jscript/target_classes.js?v=2"></script>
+        <script src="jscript/predict100.js?v=2"></script>
+    </div>
+</body>
+</html>
