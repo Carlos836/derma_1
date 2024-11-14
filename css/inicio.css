@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/12/2015, 08:22:59 AM
+    Author     : Jhon Ramirez 
+*/
+
+/* eventos --------------------------------------------------------------------------------------------------------------*/
+/* vista en grid */
+.front #grueso .block {margin-bottom:10px;}
+.front #grueso .block-block {
+	border-bottom:1px solid #dae0b8;
+	background-color:#fff;
+	-moz-box-shadow: 0 5px 10px -5px #dae0b8; /* firefox */
+	-webkit-box-shadow: 0 5px 10px -5px #dae0b8;
+	box-shadow: 0 5px 10px -5px #dae0b8; /* chrome */
+}
+.front .grueso .block-views .view-content {
+	border-bottom:1px solid #dae0b8;
+	background-color:#fff;
+	-moz-box-shadow: 0 5px 10px -5px #dae0b8; /* firefox */
+	-webkit-box-shadow: 0 5px 10px -5px #dae0b8;
+	box-shadow: 0 5px 10px -5px #dae0b8; /* chrome */
+}
+.front #grueso #block-views-inicio_programas-block_1.block tr.row-2 div,
+.front #grueso #block-views-inicio_programas-block_1.block tr.row-3 div {display:none;}
+.front #grueso #block-views-inicio_programas-block_1.block tr.row-2 div.views-field-title,
+.front #grueso #block-views-inicio_programas-block_1.block tr.row-3 div.views-field-title {
+	display:block;
+	font-size:1em;
+}
+.front .views-view-grid tr td, .page-ri .views-view-grid tr td:first-child {padding:10px;}
+.front .views-view-grid p:last-child, .page-ri .views-view-grid p:last-child {margin-bottom:0;}
+.front .views-view-grid tr td:first-child {padding-right:10px;}
+.page-ri .views-field-field-convocatoria-imagen-fid span.field-content {
+	float:left;
+	padding-right:10px;
+}
+.front .views-view-grid td, .page-ri .views-view-grid td {
+	vertical-align:top;
+	border-bottom:1px solid #EFF2DC;
+	padding:0;
+}
+body.page-educacion-continuada .views-view-grid {font-size:0.9em;}
+body.page-educacion-continuada .view-inicio-educacion-continuada td {
+	vertical-align:top;
+	border-bottom:1px solid #EFF2DC;
+	padding:10px;
+}
+.front .views-view-grid tr.row-last td, .page-ri .views-view-grid tr.row-last td {border-bottom:none;}
+.front .views-view-grid tr img,
+body.not-front .views-field-field-persona-destacada-imagen-fid img {
+	float:left;
+	margin-right:10px;
+}
+.front #grueso .block-views li:hover {background-color:#fff;}
+#grueso .view-medios-notas .item-list ul a {font-weight:normal;}
+body.front #grueso .view-content li a { /* todo el texto */
+	cursor:pointer;
+	color:#596221;
+}
+#grueso .view-content li:hover a { /* todo el texto */cursor:pointer;}
+#grueso .view-content li .views-field-title .field-content { /* encabezados de noticia */
+	font-weight:bold;
+	color:#596221;
+}
+#grueso .view-content li {
+	padding:0 5px 10px 5px;
+	position:relative;
+	list-style:none;
+	margin:0;
+	overflow:hidden;
+	line-height:1em;
+}
+.views-field-view-node { /* posicion de mas info */
+	float:right;
+	margin-top:-12px;
+}
+.views-admin-links .links li span a {
+	font-weight:bold;
+	background:none;
+}
+/* mas contenido */
+body.front #grueso .view-footer {text-align:right;}
+.mas_pestana {
+	float:right;
+	margin-left:5px;
+}
+.mas_enlace {
+	display:block;
+	border-left:1px solid #ceceba;
+	background:url(../images/pestana_boton.png) bottom right;
+	height:31px;
+    color:#70764C;
+	font-size:1em;	
+    line-height:30px;
+	padding:0 5px;
+}
+.mas_enlace:visited{color:#70764C;	}
+.mas_enlace:hover { 
+	color:#fff;
+    background:url(../images/pestana_boton_hover.png) bottom right;
+}
+/* salud */
+#promocional1 p {margin:0;}
+
